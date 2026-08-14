@@ -14,11 +14,28 @@ This application demonstrates multiple classification models trained on the **Br
 Upload the test dataset to evaluate model performance, view metrics, and analyze the confusion matrix.
 """)
 
+# --- NEW FEATURE: Download Button for Evaluator Convenience ---
+st.sidebar.header("📥 Need Test Data?")
+st.sidebar.markdown("Click below to download the sample test data used for this project:")
+
+if os.path.exists("test_data.csv"):
+    with open("test_data.csv", "rb") as file:
+        st.sidebar.download_button(
+            label="Download Sample test_data.csv",
+            data=file,
+            file_name="test_data.csv",
+            mime="text/csv"
+        )
+else:
+    st.sidebar.warning("test_data.csv not found in repository.")
+# ----------------------------------------------------------------
+
 st.sidebar.header("Instructions")
 st.sidebar.markdown("""
-1. Upload the `test_data.csv` file generated during training.
-2. Select a trained ML model from the dropdown.
-3. Click **Evaluate Model** to see predictions and metrics.
+1. Download the sample data using the button above (if needed).
+2. Upload the `test_data.csv` file below.
+3. Select a trained ML model from the dropdown.
+4. Click **Evaluate Model** to see predictions and metrics.
 """)
 
 model_files = {
@@ -92,4 +109,4 @@ if uploaded_file is not None:
                 st.subheader("📝 Classification Report")
                 st.text(classification_report(y_test, y_pred))
 else:
-    st.info("Please upload a CSV file to get started. (Use the `test_data.csv` generated during training).")
+    st.info("👆 Please upload a CSV file to get started. (You can download the sample file from the sidebar!)")
