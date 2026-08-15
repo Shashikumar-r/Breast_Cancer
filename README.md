@@ -1,4 +1,5 @@
-# Machine Learning Assignment 2: Classification Models & Streamlit Deployment
+# Machine Learning Assignment 2: 
+# Classification Models & Streamlit Deployment
 
 ## a. Problem Statement
 The objective of this project is to build, evaluate, and deploy an interactive Machine Learning web application for binary classification. The application allows users to upload test data, select from multiple pre-trained classification algorithms, and instantly view performance metrics and confusion matrices. This end-to-end project demonstrates the complete ML workflow from data preprocessing and model training to UI design and cloud deployment.
@@ -6,13 +7,13 @@ The objective of this project is to build, evaluate, and deploy an interactive M
 ## b. Dataset Description
 **Dataset Chosen:** Breast Cancer Wisconsin (Diagnostic) Dataset
 * **Source:** UCI Machine Learning Repository / Scikit-Learn built-in datasets.
-* **Instances:** 569 (Satisfies minimum 500 requirement)
-* **Features:** 30 real-valued input features (Satisfies minimum 12 requirement).
+* **Instances:** 569 
+* **Features:** 30 real-valued input features
 * **Target Variable:** Binary classification (Malignant = 0, Benign = 1).
 * **Reason for Choice:** It is a classic, highly relevant medical diagnostic problem with well-separated classes, making it ideal for demonstrating multiple classification algorithms.
 
 ## c. Github Repository Link
-* [Insert Your GitHub Repository Link Here]
+* [Click here to view the GitHub Repository](https://github.com/Shashikumar-r/Breast_Cancer)
 
 ## d. Models Used
 *(Note: The assignment mentions "6 ML models" in the text but lists 5 in the table. I have implemented the 5 listed models and added Support Vector Machine (SVM) as the 6th model to strictly fulfill the requirement).*
